@@ -1,0 +1,23 @@
+// ==UserScript==
+// @name       Correct the Injustice
+// @version    0.1
+// @description  Swifty Dream
+// @require    http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+// @include      http://www.imdb.com/title/tt0368891/*
+// @include      http://www.imdb.com/title/tt0465234/*
+// @copyright  2012+, You
+// ==/UserScript==
+function CorrectTheInjustice()
+{
+    $("table.cast_list tr.odd:first td.primary_photo img").attr("src","http://ia.media-imdb.com/images/M/MV5BMjA5ODI0NzIzNV5BMl5BanBnXkFtZTcwMzM0NjI2Nw@@._V1_SX32_CR0,0,32,44_AL_.jpg");
+    $("table.cast_list tr.odd:first td.primary_photo img").attr("alt","Swifty").attr("title","Swifty");
+    $("table.cast_list tr.odd:first td.primary_photo a").attr("href","http://www.imdb.com/name/nm2357847/");
+    
+    
+    $("table.cast_list tr.odd:first td.itemprop span.itemprop").html("Taylor Swift");
+    $("table.cast_list tr.odd:first td.itemprop a").attr("href","http://www.imdb.com/name/nm2357847/");
+    
+    $("table.cast_list tr.odd:first td.character a").html("The National Treasure");
+}
+CorrectTheInjustice();
+setInterval(CorrectTheInjustice,500);
