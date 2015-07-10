@@ -38,6 +38,7 @@ function handleText(textNode) {
     var v = textNode.nodeValue;
     console.log(v);
     v = v.replace(/Taylor Swift/gi,"National Treasure Taylor Swift");
+    v = v.replace(/Taylor Alison Swift/gi,"National Treasure Taylor Alison Swift");
     textNode.nodeValue = v;
 }
 
